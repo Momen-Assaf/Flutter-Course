@@ -3,7 +3,6 @@ class Car {
       : _color = color,
         _engine = engine,
         _text = text;
-
   //! add more attributes
   late String _color;
   late String _engine;
