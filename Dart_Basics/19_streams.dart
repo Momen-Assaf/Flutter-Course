@@ -41,3 +41,4 @@ class NumberGnenerator {
     });
   }
 }
+// in stream subscription.listen() there is an onDone: (){ ...} function that happenes when the stream is has ended and an on Error function
