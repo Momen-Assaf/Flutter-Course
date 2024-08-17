@@ -12,9 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('flutter basics'),),
+        appBar: AppBar(
+          title: const Text('Flutter basics'),
+          backgroundColor: const Color.fromARGB(255, 128, 117, 243),
+          centerTitle: true,
+          ),
         body: const Center(
-          child: Text('Hello worlds!'),
+          child: Text('Hello world!'),
         ),
       )
     );
