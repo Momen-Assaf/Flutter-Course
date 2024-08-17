@@ -1,0 +1,5 @@
+r, hot reload, for existring widgets changes.
+R, hot restart, for adding new files, widgets.
+
+stless, for creating a stateless widget
+stful, for creating a statefull widget
