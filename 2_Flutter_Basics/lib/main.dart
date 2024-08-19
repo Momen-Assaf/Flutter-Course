@@ -21,27 +21,44 @@ class MyApp extends StatelessWidget {
             title: const Text('Flutter basics'),
             centerTitle: true,
           ),
-          body: Center(
-            child: Container(
-              height: 300,
-              width: 300, //if width not defined it takes the max width
+          body: Container(
               decoration: BoxDecoration(
-                  color: Colors.blue, 
-                  borderRadius: BorderRadius.circular(10)),
-              child: const Center(
-                child: Text(
-                  'Hello world!',
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.amber,
-                    letterSpacing: 2.0,
+                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                      color: Colors.green,
+                      padding: const EdgeInsets.all(20),
+                      child: const Text("First Column child")),
+                  const SizedBox(
+                    height: 20,
                   ),
-                ),
-              ),
-            ),
-          ),
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.blue,
+                    ),
+                    child: const Text(
+                      "Hello world!",
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                   Container(
+                      color: Colors.red,
+                      child: const Text("last Column child")),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                ],
+              )),
           floatingActionButton: FloatingActionButton(
               onPressed: () => debugPrint('clicked'),
               child: const Icon(Icons.ac_unit)),
