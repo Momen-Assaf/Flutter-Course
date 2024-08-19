@@ -3,3 +3,9 @@ R, hot restart, for adding new files, widgets.
 
 stless, for creating a stateless widget
 stful, for creating a statefull widget
+
+materialapp, is the entire application
+themeData, is themes for the entire application
+
+scaffold, is the current page
+locale, is for different languages
