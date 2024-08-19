@@ -11,16 +11,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter basics'),
-          backgroundColor: const Color.fromARGB(255, 128, 117, 243),
-          centerTitle: true,
+        theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.amber,
+        )),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Flutter basics'),
+            centerTitle: true,
           ),
-        body: const Center(
-          child: Text('Hello world!'),
-        ),
-      )
-    );
+          body: const Center(
+            child: Text('Hello world!'),
+          ),
+          floatingActionButton: FloatingActionButton(
+              onPressed: () => debugPrint('clicked'),
+              child: const Icon(Icons.ac_unit)),
+        ));
   }
 }
