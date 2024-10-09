@@ -51,12 +51,25 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                   Container(
+                  Container(
                       color: Colors.red,
                       child: const Text("last Column child")),
                   const SizedBox(
                     height: 20,
                   ),
+                  SizedBox(
+                      height: 100,
+                      width: 100,
+                      child:
+                          Image.asset("assets/red.png", fit: BoxFit.fitHeight)),
+                  SizedBox(
+                    height: 40,
+                    width: 40,
+                    child: CircleAvatar(
+                      // backgroundImage: NetworkImage(""),
+                      
+                    )
+                  )
                 ],
               )),
           floatingActionButton: FloatingActionButton(
