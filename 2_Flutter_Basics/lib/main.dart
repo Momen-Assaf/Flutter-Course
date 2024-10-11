@@ -21,21 +21,18 @@ class MyApp extends StatelessWidget {
             title: const Text('Flutter basics'),
             centerTitle: true,
           ),
-          body: Container(
-              decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+          body: Center(
+            child: SingleChildScrollView(
+              // physics: const BouncingScrollPhysics(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                       color: Colors.green,
                       padding: const EdgeInsets.all(20),
+                      margin: const EdgeInsets.only(bottom: 10),
                       child: const Text("First Column child")),
-                  const SizedBox(
-                    height: 20,
-                  ),
                   Container(
                     height: 200,
                     width: 200,
@@ -43,35 +40,34 @@ class MyApp extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.blue,
                     ),
-                    child: const Text(
-                      "Hello world!",
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 20,
+                    child: const Center(
+                      child: Text(
+                        "Hello world!",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 20,
+                          
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                      color: Colors.red,
-                      child: const Text("last Column child")),
-                  const SizedBox(
-                    height: 20,
                   ),
                   SizedBox(
                       height: 100,
                       width: 100,
                       child:
                           Image.asset("assets/red.png", fit: BoxFit.fitHeight)),
-                  SizedBox(
-                    height: 40,
-                    width: 40,
-                    child: CircleAvatar(
-                      // backgroundImage: NetworkImage(""),
-                      
-                    )
-                  )
+                  Container(
+                      color: Colors.amber,
+                      height: 500,
+                      width: 40,
+                      child: const Text("PLACEHOLDER")),
+                  Container(
+                      margin: const EdgeInsets.only(top: 10),
+                      color: Colors.red,
+                      child: const Text("last Column child")),
                 ],
-              )),
+              ),
+            )),
           floatingActionButton: FloatingActionButton(
               onPressed: () => debugPrint('clicked'),
               child: const Icon(Icons.ac_unit)),
