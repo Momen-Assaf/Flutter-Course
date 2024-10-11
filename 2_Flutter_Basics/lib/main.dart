@@ -6,10 +6,10 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return MaterialApp(
         theme: ThemeData(
             appBarTheme: const AppBarTheme(
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
                           Image.asset("assets/red.png", fit: BoxFit.fitHeight)),
                   Container(
                       color: Colors.amber,
-                      height: 500,
+                      height: size.height * 1.5,
                       width: 40,
                       child: const Text("PLACEHOLDER")),
                   Container(
