@@ -1,4 +1,5 @@
 import 'package:basics/presentation/widget_examples/widgets/box_decoration_example.dart';
+import 'package:basics/presentation/widget_examples/widgets/buttons_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/first_column_child_widget.dart';
 import 'package:basics/presentation/widget_examples/widgets/image_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/last_column_child.dart';
@@ -29,7 +30,8 @@ class WidgetExamplesScreen extends StatelessWidget {
             const ImageExample(),
             ScrollPlaceHolderExample(size: size),
             const LastColumnChild(),
-            const LayoutBuilderExample()
+            const LayoutBuilderExample(),
+            const ButtonsExample(),
           ],
         ),
       )),
