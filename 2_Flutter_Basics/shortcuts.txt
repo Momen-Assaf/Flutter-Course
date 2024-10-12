@@ -14,3 +14,7 @@ flexiable, is for responsive, uses as little space as possible
 expanded, is for using the entire space it has
 
 run flutter pub get, after changin the yaml file
+
+#Custom Buttons:
+    Gesture detector, can handle all events without animations.
+    ink is for animatinos mainly.

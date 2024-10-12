@@ -1,3 +1,4 @@
+import 'package:basics/presentation/componenets/custom_button.dart';
 import 'package:basics/presentation/widget_examples/widgets/box_decoration_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/buttons_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/first_column_child_widget.dart';
@@ -31,7 +32,24 @@ class WidgetExamplesScreen extends StatelessWidget {
             ScrollPlaceHolderExample(size: size),
             const LastColumnChild(),
             const LayoutBuilderExample(),
-            const ButtonsExample(),
+            const Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: ButtonsExample(),
+            ),
+            CustomButton(
+              onTap: () {
+                debugPrint('tapped');
+              },
+              icon: Icons.home,
+              iconColor: Colors.white,
+            ),
+            CustomButton(
+              onTap: () {
+                debugPrint('play');
+              },
+              icon: Icons.play_arrow,
+              iconColor: Colors.white,
+            ),
           ],
         ),
       )),
@@ -41,4 +59,3 @@ class WidgetExamplesScreen extends StatelessWidget {
     );
   }
 }
-
