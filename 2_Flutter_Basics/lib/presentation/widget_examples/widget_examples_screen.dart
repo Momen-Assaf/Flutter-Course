@@ -32,10 +32,8 @@ class WidgetExamplesScreen extends StatelessWidget {
             ScrollPlaceHolderExample(size: size),
             const LastColumnChild(),
             const LayoutBuilderExample(),
-            const Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: ButtonsExample(),
-            ),
+            const SizedBox( height: 20,),
+            const ButtonsExample(),
             CustomButton(
               onTap: () {
                 debugPrint('tapped');
