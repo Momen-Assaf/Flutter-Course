@@ -1,4 +1,5 @@
 import 'package:basics/presentation/componenets/custom_button.dart';
+import 'package:basics/presentation/navigation_example_screens/screen_one.dart';
 import 'package:basics/presentation/widget_examples/widgets/box_decoration_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/buttons_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/first_column_child_widget.dart';
@@ -32,7 +33,9 @@ class WidgetExamplesScreen extends StatelessWidget {
             ScrollPlaceHolderExample(size: size),
             const LastColumnChild(),
             const LayoutBuilderExample(),
-            const SizedBox( height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             const ButtonsExample(),
             CustomButton(
               onTap: () {
@@ -43,7 +46,8 @@ class WidgetExamplesScreen extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                debugPrint('play');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const ScreenOne()));
               },
               icon: Icons.play_arrow,
               iconColor: Colors.white,

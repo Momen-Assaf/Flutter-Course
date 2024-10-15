@@ -10,7 +10,14 @@ class ScreenOne extends StatelessWidget {
         title: const Text("Screen one"),
         backgroundColor: Colors.green,
       ),
-      body: const Placeholder(),
+      body: Center(
+        child: TextButton(
+          child: const Text('Go back'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
     );
   }
 }
