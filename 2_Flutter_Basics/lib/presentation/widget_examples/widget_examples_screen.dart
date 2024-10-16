@@ -46,8 +46,9 @@ class WidgetExamplesScreen extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const ScreenOne()));
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => const ScreenOne()));
+                Navigator.pushNamed(context, '/screenOne');
               },
               icon: Icons.play_arrow,
               iconColor: Colors.white,
