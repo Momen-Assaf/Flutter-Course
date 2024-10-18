@@ -1,3 +1,4 @@
+import 'package:basics/application/theme_services.dart';
 import 'package:basics/presentation/componenets/custom_button.dart';
 import 'package:basics/presentation/navigation_example_screens/screen_one.dart';
 import 'package:basics/presentation/widget_examples/widgets/box_decoration_example.dart';
@@ -8,6 +9,7 @@ import 'package:basics/presentation/widget_examples/widgets/last_column_child.da
 import 'package:basics/presentation/widget_examples/widgets/layout_builder_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/scoll_place_holder_example.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class WidgetExamplesScreen extends StatelessWidget {
   const WidgetExamplesScreen({super.key});
@@ -57,7 +59,9 @@ class WidgetExamplesScreen extends StatelessWidget {
         ),
       )),
       floatingActionButton: FloatingActionButton(
-          onPressed: () => debugPrint('clicked'),
+          onPressed: () {
+            Provider.of<ThemeService>(context, listen: false).toggleTheme();
+          },
           child: const Icon(Icons.ac_unit)),
     );
   }
