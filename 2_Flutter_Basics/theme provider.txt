@@ -1,0 +1,13 @@
+first create a theme service,
+then wrap the app in a ChangeNotifierProvider, 
+and pass the theme service to it from context,
+then wrap the main widget builder with 
+    return Consumer<ThemeService>(builder: (context, themeService, child) {
+        return the widget tree;
+    }
+and in the MaterialApp do
+    themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
+
+lastly to call the change service is like:
+    Provider.of<ThemeService>(context, listen: false).toggleTheme();
+
