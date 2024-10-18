@@ -1,6 +1,5 @@
 import 'package:basics/application/theme_services.dart';
 import 'package:basics/presentation/componenets/custom_button.dart';
-import 'package:basics/presentation/navigation_example_screens/screen_one.dart';
 import 'package:basics/presentation/widget_examples/widgets/box_decoration_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/buttons_example.dart';
 import 'package:basics/presentation/widget_examples/widgets/first_column_child_widget.dart';
