@@ -23,7 +23,7 @@ class _RootBottomNagicationState extends State<RootBottomNavigation> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
-          backgroundColor: Colors.amber,
+          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
           onTap: (index) {
             setState(() {
               _currentIndex = index;
