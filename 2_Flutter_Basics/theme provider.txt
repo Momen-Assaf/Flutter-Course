@@ -1,7 +1,7 @@
 first create a theme service,
 then wrap the app in a ChangeNotifierProvider, 
 and pass the theme service to it from context,
-then wrap the main widget builder with 
+then wrap the main widget builder with (also any tree we want to listen to the service changes)
     return Consumer<ThemeService>(builder: (context, themeService, child) {
         return the widget tree;
     }

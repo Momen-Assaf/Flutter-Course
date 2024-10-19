@@ -61,7 +61,7 @@ class WidgetExamplesScreen extends StatelessWidget {
           onPressed: () {
             Provider.of<ThemeService>(context, listen: false).toggleTheme();
           },
-          child: const Icon(Icons.ac_unit)),
+          child: const Icon(Icons.theater_comedy)),
     );
   }
 }
