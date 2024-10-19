@@ -4,7 +4,7 @@ class AppTheme {
   AppTheme._();
 
   static const _primaryColorLight = Colors.lightBlueAccent;
-  static const _primaryColorDark = Colors.lightGreenAccent;
+  static const _primaryColorDark = Color.fromRGBO(48, 48, 48, 1);
 
   static final ThemeData lightTheme = ThemeData(
       useMaterial3: true,
