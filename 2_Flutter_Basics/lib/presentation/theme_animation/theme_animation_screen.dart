@@ -1,4 +1,7 @@
 import 'package:basics/application/theme_services.dart';
+import 'package:basics/presentation/theme_animation/widgets/moon.dart';
+import 'package:basics/presentation/theme_animation/widgets/star.dart';
+import 'package:basics/presentation/theme_animation/widgets/sun.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -24,10 +27,12 @@ class ThemeAnimationScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: themeService.isDarkModeOn ? const Color.fromARGB(221, 26, 26, 26) : Colors.grey,
+                        color: themeService.isDarkModeOn
+                            ? const Color.fromARGB(221, 26, 26, 26)
+                            : Colors.grey,
                         offset: const Offset(0, 3),
                         blurRadius: 5,
-                        spreadRadius: 7,
+                        spreadRadius: 3,
                       )
                     ],
                     borderRadius: BorderRadius.circular(15),
@@ -50,6 +55,25 @@ class ThemeAnimationScreen extends StatelessWidget {
                   ),
                   child: Stack(
                     children: [
+                      const Positioned(top: 100, right: 40, child: Star()),
+                      const Positioned(top: 90, left: 70, child: Star()),
+                      const Positioned(top: 70, right: 180, child: Star()),
+                      const Positioned(top: 160, right: 90, child: Star()),
+                      AnimatedPositioned(
+                        duration: const Duration(milliseconds: 400),
+                        top: themeService.isDarkModeOn ? 100 : 130,
+                        right: themeService.isDarkModeOn ? 150 : -50,
+                        child: AnimatedOpacity(
+                            opacity: themeService.isDarkModeOn ? 1 : 0,
+                            duration: const Duration(milliseconds: 500),
+                            child: const Moon()),
+                      ),
+                      AnimatedPadding(
+                        duration: const Duration(milliseconds: 500),
+                        padding: EdgeInsets.only(
+                            top: themeService.isDarkModeOn ? 120 : 60),
+                        child: const Center(child: Sun()),
+                      ),
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
