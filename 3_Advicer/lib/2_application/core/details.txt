@@ -1,0 +1,3 @@
+Core:
+/Services: is for stuff used all around the application
+/Widget: is for the widgets used across the pages
